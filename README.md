@@ -27,7 +27,7 @@ As a result, all measurement names now look as follows: 'time.BodyGyroJerk.mean.
 
 8. Measurement column is separated into four columns ('measurementtype', 'measurement', 'aggregation', 'axis') by executing separate() on the main_df using '.' as a separator. This introduces some NAs in the 'axis' column due to certain measurements do not contain information about axis (eg.:'tBodyBodyGyroJerkMag').
 
-9. main_df is grouped by each variable (apart from 'value') by executing goup_by on it.
+9. main_df is grouped by each variable (apart from 'value') by executing group_by() on it.
 
 10. Average value is calculated for each group by executing summarize() on main_df and the result is stored in the 'meanvalue' column.
 
