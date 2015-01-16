@@ -35,8 +35,8 @@ As a result, all measurement names now look as follows: 'time.BodyGyroJerk.mean.
 11. The resulting data frame is written to a file with the name "result_dataset.txt".
 
 The resulting data set is tidy, because:
-	a. It has one variable in each column
-	b. It has one observation in each row
-	c. There is one table for each 'kind' of variable
+	- It has one variable in each column
+	- It has one observation in each row
+	- There is one table for each 'kind' of variable
 
 The data set contains descriptive activity names instead of activity ids. The data set variable names are descriptive, they are not abbreviated, do not contain underscores/whispaces/etc.
