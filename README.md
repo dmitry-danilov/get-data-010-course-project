@@ -21,6 +21,7 @@ The following describes how the script works:
 	- multiple consecutive dots are replaced with one dot
 	- all leading 't' chars in column names are replaced with 'time.'
 	- all leading 'f' chars in column names are replaced with 'frequency.'
+	
 As a result, all measurement names now look as follows: 'time.BodyGyroJerk.mean.X', 'frequency.BodyBodyAccJerkMag.std', etc.
 
 7. All measurement columns in main_df are gathered into 'measurement' and 'value' columns by executing gather() on main_df.
