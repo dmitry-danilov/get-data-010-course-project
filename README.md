@@ -17,7 +17,6 @@ The following describes how the script works:
 5. 'subject', 'activity' and all measurement columns with names that contain 'mean()' and 'std()' are extracted from main_df by executing select() on main_df and re-assigning the result to itself.
 
 6. The measurement column names are tidied by performing the following regex replacements:
-
 	- all trailing dots are removed
 	- multiple consecutive dots are replaced with one dot
 	- all leading 't' chars in column names are replaced with 'time.'
@@ -36,7 +35,6 @@ As a result, all measurement names now look as follows: 'time.BodyGyroJerk.mean.
 11. The resulting data frame is written to a file with the name "result_dataset.txt".
 
 The resulting data set is tidy, because:
-
 	- It has one variable in each column
 	- It has one observation in each row
 	- There is one table for each 'kind' of variable
