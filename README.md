@@ -2,7 +2,7 @@
 Getting and Cleaning Data Course Project ReadMe
 ================================================
 
-The script relies on tidyr and dplyr (v0.4.0) packages and requires the working directory to be set to the root of the project's 'UCI HAR Dataset' folder. The script contains checks if the required packages are installed and if not - installs them. If dplyr package older than v0.4.0 is installed in R, it will be removed and re-installed to make sure the latest available version is installed.
+The script relies on tidyr and dplyr (v0.4.0) packages and requires the working directory to be set to the root of the Samsung data folder. The script contains checks if the required packages are installed, and if not - installs them. If dplyr package older than v0.4.0 is installed in R, it will be removed and re-installed to make sure the latest available version is installed.
 If the script fails to read data files, it will throw an error about the working directory not being set to the root of the folder with the Samsung data and will stop execution.
 
 The following describes how the script works:
