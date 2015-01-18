@@ -1,23 +1,28 @@
 # check if dplyr package is installed, if not - install it
-if (!"dplyr" %in% installed.packages()[,"Package"]) {
+if (!require("dplyr")) {
         message("dplyr package not installed, installing now...")
         install.packages("dplyr")
+        if(!require("dplyr")) {
+                stop("unable to load dplyr, execution stopped")
+        }
 # if a version of dplyr older than 0.4.0 was installed in R - remove and reinstall
 # the most recent one (4.0.1 at the time of writing)
 } else if (installed.packages()["dplyr",][["Version"]] < "0.4.0") {
-        message("dplyr package installed, but it is older than v0.4.0")
-        message("re-installing dplyr...")
+        message("dplyr installed, but it is older than v0.4.0, attempting to re-install..")
         remove.packages("dplyr")
         install.packages("dplyr")
+        if(!require("dplyr")) {
+                stop("unable to load dplyr, execution stopped")
+        }
 }
 # check if tidyr is intalled, if not - install it
-if (!"tidyr" %in% installed.packages()[,"Package"]) {
+if (!require("tidyr")) {
         message("tidyr package not installed, installing now...")
         install.packages("tidyr")
+        if(!require("tidyr")) {
+                stop("unable to load tidyr, execution stopped")
+        }
 }
-# load required libs
-library("dplyr")
-library("tidyr")
 
 # check to see if WD was set correcrtly
 if (!file.exists("activity_labels.txt")) {
